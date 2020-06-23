@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<link rel="icon" href="image/logo-site.png" type="image/icon type">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 	<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+	<title>prForU</title></head>
+<body>
+
+	<div class="wrapper fadeInDown">
+	  <div id="formContent">
+		    <!-- Tabs Titles -->
+
+		    <!-- Icon -->
+		    <div class="fadeIn first">
+		      <img src="image/logo.png" id="icon" alt="User Icon" />
+		    </div>
+
+		    <form class="form" action="registration.php" method="post">
+	    		 <input type="text" id="fno" class="fadeIn second" name="fno" placeholder="Ф.И.O"><span class="red_line" id="fno_error"></span>
+    			 <input type="text" id="place" class="fadeIn third" name="place" placeholder="Населенный пункт"><span class="red_line" id="place_error"></span>
+    			 <input type="text" id="phone" class="fadeIn fourth" name="phone" placeholder="Телефон"><span class="red_line" id="phone_error"></span>
+				 <input type="text" id="email" class="fadeIn five" name="email" placeholder="Email"><span class="red_line" id="email_error"></span>
+				 <h2>Ссылки</h2>
+				 <input type="text" id="facebook" class="fadeIn six" name="facebook" placeholder="Facebook"><span class="red_line" id="facebook_error"></span>
+				 <input type="text" id="vk" class="fadeIn six" name="vk" placeholder="ВКонтакте"><span class="red_line" id="vk_error"></span>
+				 <input type="text" id="ok" class="fadeIn six" name="ok" placeholder="Одноклассники"><span class="red_line" id="ok_error"></span>
+				 <input type="text" id="instagram" class="fadeIn six" name="instagram" placeholder="Instagram"><span class="red_line" id="instagram_error"></span>
+				 <input id="submit" type="submit" href="#myModal" class="fadeIn fourth btn btn-lg btn-primary" value="Отправить" name="submit">
+		    </form>
+
+		    <!-- Remind Passowrd -->
+		    <div id="formFooter">
+		      <a class="underlineHover" href="#">Тех поддержка: +7(987)0000989</a>
+		    </div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/validation.js"></script>
+</body>
+</html>
