@@ -20,8 +20,32 @@ if(isset($_POST['submit'])) {
 
     $pdoExec = $pdoResult->execute(array(":fno" => $fno, ":place" => $place, ":phone" => $phone, ":email" => $email, ":vk" => $vk, ":ok" => $ok, ":facebook" => $facebook, ":instagram" => $instagram, ":count" => $count));
 	   
-		echo "<script type='text/javascript' src='js/validation.js'></script>";
+	// echo "<script type='text/javascript' src='js/validation.js'></script>";
+	define('TELEGRAM_TOKEN', '1237532771:AAHJbLcrCQJTr3snLoIWnviaaDN4YvBQec8');
+	define('TELEGRAM_CHATID', '473784254');
 
+	function message_to_telegram($text)
+	{
+		
+
+	    $ch = curl_init();
+	    curl_setopt_array(
+	        $ch,
+	        array(
+	            CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
+	            CURLOPT_POST => TRUE,
+	            CURLOPT_RETURNTRANSFER => TRUE,
+	            CURLOPT_TIMEOUT => 10,
+	            CURLOPT_POSTFIELDS => array(
+	                'chat_id' => TELEGRAM_CHATID,
+	                'text' => $text,
+	            ),
+	        )
+	    );
+	    curl_exec($ch);
+	}
+
+	message_to_telegram("Зарегистрировался {$_POST['fno']}");
 }
 ?>
 
